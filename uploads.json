@@ -10,3 +10,15 @@
     }
   ]
 }
+{
+  "uploads": [
+    {
+      "title": "Kavram Haritası",
+      "description": "Eğitimde Kullanılan Araç-Gereçler, Kavram Haritası ile Görselleştirildi.",
+      "tag": "Kavram Haritası",
+      "icon": "🗾",
+      "date": "27 Şubat 2026",
+      "file": "uploads/harita-1.jpg"
+    }
+  ]
+}
