@@ -1,0 +1,27 @@
+---
+title: "Ornek Baslik"
+date: "2026-02-27"
+tags: ["ornek", "mdx"]
+icon: "file"
+description: "Bu dosya bir taslak ornektir ve UI'da listelenmez."
+attachment: "no" // "yes" veya "no"
+---
+
+# Ornek Icerik
+
+Bu dosya `.mdx.example` uzantisi kullandigi icin sistem tarafindan okunmaz.
+
+## Basit Liste
+
+- Madde 1
+- Madde 2
+- Madde 3
+
+## Baglanti
+
+[Ornek link](https://me.istmail.me)
+
+## Ek Bilesenler (opsiyonel)
+
+- <AttachmentLink href="/uploads/ornek/rapor.pdf" label="PDF indir" />
+- <PdfEmbed src="/uploads/ornek/rapor.pdf" title="Ornek PDF" />
