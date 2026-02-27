@@ -176,3 +176,5 @@ Bu bilesenler `components/MdxComponents.tsx` uzerinden MDX'e baglanir.
 ## Notlar
 
 - Kodlama stili, agent kurallari ve ayrintili teknik rehber icin `AGENTS.md` dosyasina bak.
+
+**refactored by isotjs**
