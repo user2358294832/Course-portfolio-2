@@ -1,17 +1,27 @@
-"use client"; // EN ÜSTE BU SATIRI EKLE
+"use client";
 
 import React, { useState } from 'react';
 
 interface QuizProps {
-  question: string;
-  options: string[];
-  correctAnswerIndex: number; 
-  explanation: string;
+  question?: string;
+  options?: string[]; // Opsiyonel yaptık ki hata vermesin
+  correctAnswerIndex?: number;
+  explanation?: string;
 }
 
-const Quiz: React.FC<QuizProps> = ({ question, options, correctAnswerIndex, explanation }) => {
+const Quiz: React.FC<QuizProps> = ({ 
+  question = "", 
+  options = [], // Eğer options gelmezse boş liste kullan
+  correctAnswerIndex = 0, 
+  explanation = "" 
+}) => {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
+
+  // Güvenlik Kontrolü: Eğer options yoksa veya boşsa hiçbir şey gösterme, hata da verme.
+  if (!options || options.length === 0) {
+    return null; 
+  }
 
   const handleOptionClick = (index: number) => {
     setSelectedOption(index);
