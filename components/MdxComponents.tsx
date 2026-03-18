@@ -1,3 +1,4 @@
+import Quiz from './Quiz'; // Dosya yolunun doğru olduğundan emin ol
 import type { MDXComponents } from "mdx/types";
 import { AttachmentLink } from "@/components/AttachmentLink";
 import { PdfEmbed } from "@/components/PdfEmbed";
