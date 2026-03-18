@@ -1,11 +1,9 @@
 import { AttachmentLink } from './AttachmentLink';
 import { PdfEmbed } from './PdfEmbed';
-import Quiz from './Quiz'; // 1. Adım: Import edildi
 
 export const components = {
   AttachmentLink,
   PdfEmbed,
-  Quiz, // 2. Adım: Obje içine eklendi
 };
 
 type BuildMdxComponentsOptions = {
@@ -16,9 +14,6 @@ export function buildMdxComponents({
   attachmentEnabled,
 }: BuildMdxComponentsOptions) {
   return {
-    // 3. Adım: Buraya Quiz'i ekliyoruz ki sistem render edebilsin
-    Quiz: (props: any) => <Quiz {...props} />, 
-    
     AttachmentLink: (props: any) => (
       <AttachmentLink {...props} exists={props.exists ?? attachmentEnabled} />
     ),
