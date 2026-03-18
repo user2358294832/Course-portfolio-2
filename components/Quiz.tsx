@@ -1,9 +1,11 @@
+"use client"; // EN ÜSTE BU SATIRI EKLE
+
 import React, { useState } from 'react';
 
 interface QuizProps {
   question: string;
   options: string[];
-  correctAnswerIndex: number; // 0-based index
+  correctAnswerIndex: number; 
   explanation: string;
 }
 
