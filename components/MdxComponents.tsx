@@ -1,7 +1,15 @@
-import Quiz from './Quiz'; // Dosya yolunun doğru olduğundan emin ol
-import type { MDXComponents } from "mdx/types";
-import { AttachmentLink } from "@/components/AttachmentLink";
-import { PdfEmbed } from "@/components/PdfEmbed";
+import { AttachmentLink } from './AttachmentLink';
+import { PdfEmbed } from './PdfEmbed';
+import Quiz from './Quiz'; // 1. Adım: Quiz bileşenini import et
+
+// ... varsa diğer importlar
+
+export const components = {
+  AttachmentLink,
+  PdfEmbed,
+  Quiz, // 2. Adım: Bileşeni buraya ekle
+  // ... varsa diğer bileşenler
+};
 
 type BuildMdxComponentsOptions = {
   attachmentEnabled: boolean;
