@@ -3,25 +3,20 @@
 import React, { useState } from 'react';
 
 interface QuizProps {
-  question?: string;
-  options?: string[]; // Opsiyonel yaptık ki hata vermesin
-  correctAnswerIndex?: number;
-  explanation?: string;
+  question: string;
+  options: string; // Artık bir dizi değil, düz metin alacak
+  correctAnswerIndex: number;
+  explanation: string;
 }
 
-const Quiz: React.FC<QuizProps> = ({ 
-  question = "", 
-  options = [], // Eğer options gelmezse boş liste kullan
-  correctAnswerIndex = 0, 
-  explanation = "" 
-}) => {
+const Quiz: React.FC<QuizProps> = ({ question, options, correctAnswerIndex, explanation }) => {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
 
-  // Güvenlik Kontrolü: Eğer options yoksa veya boşsa hiçbir şey gösterme, hata da verme.
-  if (!options || options.length === 0) {
-    return null; 
-  }
+  // Seçenekleri "|" karakterinden ayırarak diziye dönüştürüyoruz
+  const optionsArray = options ? options.split('|').map(opt => opt.trim()) : [];
+
+  if (optionsArray.length === 0) return null;
 
   const handleOptionClick = (index: number) => {
     setSelectedOption(index);
@@ -34,7 +29,7 @@ const Quiz: React.FC<QuizProps> = ({
     <div className="border border-zinc-200 rounded-lg p-6 bg-white dark:bg-zinc-900 shadow-sm my-6">
       <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mb-4">{question}</h3>
       <ul className="space-y-3">
-        {options.map((option, index) => (
+        {optionsArray.map((option, index) => (
           <li
             key={index}
             className={`cursor-pointer p-4 rounded-md border text-base ${
