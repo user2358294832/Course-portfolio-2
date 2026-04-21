@@ -1,35 +1,54 @@
 ---
-title: "AI - Ses Kaydı: MP3 ve Lossless Audio Farkları"
-date: "2026-04-20"
-tags: ["ses-teknolojileri", "hi-fi", "mp3", "lossless", "elevenlabs"]
+title: "AI - Ses Kaydı: MP3 ve Lossless Audio Analizi"
+date: "2026-04-21"
+tags: ["ses-teknolojileri", "hi-fi", "lossless", "elevenlabs", "materyal-tasarımı"]
 icon: "🔊"
-description: "Sıkıştırılmış (MP3) ve kayıpsız (Lossless) ses formatları arasındaki teknik farkları ele alan 1 dakikalık sesli anlatım."
+description: "Sıkıştırılmış ve kayıpsız ses formatları arasındaki teknik farkları ElevenLabs AI seslendirmesi ile inceleyen ses kaydı."
 attachment: "no"
 ---
 
-# Ses Formatları: MP3 ve Lossless Audio
+# Ses Teknolojileri: MP3 ve Lossless Audio
 
-Bu çalışmada, dijital ses dünyasının iki temel kutbu olan **MP3** (Sıkıştırılmış) ve **Lossless** (Kayıpsız - FLAC/ALAC) formatları arasındaki farkları ElevenLabs teknolojisi ile seslendirdim. 
+Bu çalışmada, dijital ses dünyasının iki temel formatı olan **MP3** (Sıkıştırılmış/Lossy) ve **Lossless** (Kayıpsız/FLAC-ALAC) arasındaki farkları ElevenLabs teknolojisi ile seslendirdim. 
 
-Özellikle yüksek kaliteli ses ekipmanlarında bu farkın nasıl hissedildiği ve verinin nasıl işlendiği üzerine teknik bir özet sunulmaktadır.
+Özellikle yüksek sadakatli (Hi-Fi) ses sistemlerinde bu iki format arasındaki veri aktarımı ve duyulabilir farklar üzerine teknik bir özet sunulmaktadır.
 
 ---
 
 ## 🎧 Sesli Anlatımı Dinleyin
 
-Aşağıdaki oynatıcı üzerinden 1 dakikalık teknik analizi dinleyebilirsiniz:
+Aşağıdaki interaktif oynatıcı üzerinden 1 dakikalık teknik analizi dinleyebilirsiniz:
 
-{/* Ses Oynatıcı Alanı */}
-<div style={{ width: '100%', padding: '20px', background: '#1a1a1a', borderRadius: '15px', border: '1px solid #333', textAlign: 'center', margin: '20px 0' }}>
-  <audio controls style={{ width: '100%' }}>
-    {/* Senin Dosya ID'n ile güncellendi */}
-    <source src="https://docs.google.com/uc?id=1mmVOyVkPwq-Jxn072Ux-oXw7WmWLy0d5" type="audio/mpeg" />
+<div style={{ 
+  width: '100%', 
+  padding: '25px', 
+  background: 'linear-gradient(145deg, #1e1e1e, #121212)', 
+  borderRadius: '20px', 
+  border: '1px solid #333', 
+  boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+  textAlign: 'center', 
+  margin: '20px 0' 
+}}>
+  <h4 style={{ color: '#fff', marginBottom: '15px', fontSize: '1rem', fontWeight: '500' }}>
+    Lossless vs MP3: Teknik Karşılaştırma
+  </h4>
+  
+  <audio controls style={{ width: '100%', filter: 'invert(100%) hue-rotate(180deg)' }}>
+    {/* Vercel Blob üzerinden aldığın .mp3 linkini buraya yapıştır */}
+    <source src="https://fgnnyinmkq8xjd0w.private.blob.vercel-storage.com/ElevenLabs_2026-04-20T10_53_19_Fatih%20Y%C4%B1ld%C4%B1r%C4%B1m%20-%20Deep%2C%20Clear%20and%20Rich_pvc_sp100_s50_sb75_se0_b_m2.mp3" type="audio/mpeg" />
     Tarayıcınız ses öğesini desteklemiyor.
   </audio>
-  <p style={{ color: '#888', fontSize: '0.8rem', marginTop: '10px' }}>Seslendirme: ElevenLabs AI</p>
+  
+  <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '15px' }}>
+    <span style={{ color: '#00e676', fontSize: '0.75rem', fontWeight: '600' }}>● High Fidelity</span>
+    <span style={{ color: '#888', fontSize: '0.75rem' }}>ElevenLabs AI Voiceover</span>
+  </div>
 </div>
 
 ---
 
-**Dosyayı Drive üzerinden aç:**
-<AttachmentLink href="https://drive.google.com/file/d/1mmVOyVkPwq-Jxn072Ux-oXw7WmWLy0d5/view" label="Ses Dosyasını Yeni Sekmede Aç" />
+**Dosyayı İndir:**
+
+Kaydı doğrudan cihazınıza indirmek veya yüksek çözünürlüklü olarak dinlemek isterseniz:
+
+<AttachmentLink href="VERCEL_BLOB_LINKIN_BURAYA.mp3" label="Ses Dosyasını İndir / Yeni Sekmede Aç" />
